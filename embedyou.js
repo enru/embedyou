@@ -11,10 +11,19 @@ var EmbedYou = {
 		var head = document.getElementsByTagName("head")[0];
 		var css = document.createElement("link");
 		css.rel = 'stylesheet';
-		css.href = "http://www.enru.co.uk/embedyou/v1/embedyou.css";
+		css.href = this.embedUrl+"/embedyou.css";
 		head.appendChild(css)
 	}
-	,init: function() {
+    ,initPath: function() {
+        var src = document.getElementById('embedyou').getAttribute('src');
+        var path = src.split('/').slice(0,-1).join('/');
+        if(path.length == 0) {
+            path = document.URL.split('/').slice(0,-1).join('/');
+        }
+        this.embedUrl = path;
+    }
+	,init: function(embedUrl) {
+        this.initPath();
 		this.initCSS();
 		var anchors = document.getElementsByTagName('a');
 		for(var i=0; i < anchors.length; i++) {
@@ -45,7 +54,7 @@ var EmbedYou = {
         	var script  = document.createElement("script");
 			script.id = id+"_script";
         	script.type = "text/javascript";
-        	script.src = "http://www.enru.co.uk/embedyou/d/embedyou.php?url="+encodeURIComponent(url)+"&id="+encodeURIComponent(id);
+        	script.src = this.embedUrl+"/embedyou.php?url="+encodeURIComponent(url)+"&id="+encodeURIComponent(id);
         	head.appendChild(script)
 	}
 }
