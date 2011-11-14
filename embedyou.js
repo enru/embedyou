@@ -36,10 +36,14 @@ var EmbedYou = {
 		html.innerHTML = code;
 		a.style.display = 'none';
 		a.parentNode.insertBefore(html, a);
+		var head = document.getElementsByTagName("head")[0];
+		var script = document.getElementById(id+"_script");
+		head.removeChild(script);
 	}
 	,append: function(url, id) {
 		var head = document.getElementsByTagName("head")[0];
         	var script  = document.createElement("script");
+			script.id = id+"_script";
         	script.type = "text/javascript";
         	script.src = "http://www.enru.co.uk/embedyou/d/embedyou.php?url="+encodeURIComponent(url)+"&id="+encodeURIComponent(id);
         	head.appendChild(script)
