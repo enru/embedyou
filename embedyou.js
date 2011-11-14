@@ -6,23 +6,23 @@ var EmbedYou = {
         ,/http(s)?:\/\/(www\.)?\youtube\.com\/embed/([a-z0-9]+)/i
         */
         ,/http(s)?:\/\/(www\.)?\youtu\.be\/([a-z0-9]+)/i
-    ]
+	]
 	,initCSS: function(url) {
 		var head = document.getElementsByTagName("head")[0];
-        var css = document.createElement("link");
+		var css = document.createElement("link");
 		css.rel = 'stylesheet';
-        css.href = "http://www.enru.co.uk/embedyou/v1/embedyou.css";
-        head.appendChild(css)
+		css.href = "http://www.enru.co.uk/embedyou/v1/embedyou.css";
+		head.appendChild(css)
 	}
 	,init: function() {
 		this.initCSS();
 		var anchors = document.getElementsByTagName('a');
 		for(var i=0; i < anchors.length; i++) {
 			var a = anchors[i];
-            for(var j=0; j<this.regex.length; j++) {
-                var matches = a.href.match(this.regex[j]);
-                if(matches) this.handle(a, "embedyou_"+matches[3]+"_"+i)
-            }
+			for(var j=0; j<this.regex.length; j++) {
+				var matches = a.href.match(this.regex[j]);
+				if(matches) this.handle(a, "embedyou_"+matches[3]+"_"+i)
+			}
 		}
 	}
 	,handle: function(anchor, id) {
