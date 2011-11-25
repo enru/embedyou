@@ -1,11 +1,12 @@
 var EmbedYou = {
 	regex: [
-        /http(s)?:\/\/(www\.)?\youtube\.com\/watch\?.*v=([a-z0-9]+)/i
+        /http(s)?:\/\/(www\.)?vimeo\.com\/([a-z0-9]+)/i
+        ,/http(s)?:\/\/(www\.)?youtube\.com\/watch\?.*v=([a-z0-9]+)/i
+        ,/http(s)?:\/\/(www\.)?youtu\.be\/([a-z0-9]+)/i
         /* ignore embed urls
-        ,/http(s)?:\/\/(www\.)?\youtube\.com\/v/([a-z0-9]+)/i
-        ,/http(s)?:\/\/(www\.)?\youtube\.com\/embed/([a-z0-9]+)/i
+        ,/http(s)?:\/\/(www\.)?youtube\.com\/v/([a-z0-9]+)/i
+        ,/http(s)?:\/\/(www\.)?youtube\.com\/embed/([a-z0-9]+)/i
         */
-        ,/http(s)?:\/\/(www\.)?\youtu\.be\/([a-z0-9]+)/i
 	]
 	,initCSS: function(url) {
 		var head = document.getElementsByTagName("head")[0];
