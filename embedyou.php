@@ -13,11 +13,10 @@ if(isset($_REQUEST['url'])) {
                 $req = 'http://www.youtube.com/oembed?url='.urlencode($_GET['url']);
                 break;
             case 'vimeo.com':
-		$width = 470;
-		if(isset($qs['width'])) $width = filter_var($qs['width'], FILTER_VALIDATE_INT);
-		$height = 264;
-		if(isset($qs['height'])) $height = filter_var($qs['height'], FILTER_VALIDATE_INT);
-		$req = 'http://vimeo.com/api/oembed.json?width='.$width.'&height='.$height.'&url='.urlencode($_GET['url']);
+                $query = array('url' => $_GET['url']);
+                if(isset($qs['width'])) $query['width'] = filter_var($qs['width'], FILTER_VALIDATE_INT);
+                if(isset($qs['height'])) $query['height'] = filter_var($qs['height'], FILTER_VALIDATE_INT);
+                $req = 'http://vimeo.com/api/oembed.json?'. http_build_query($query);
                 break;
             default:
                 break;
