@@ -16,8 +16,12 @@ var EmbedYou = {
 		head.appendChild(css)
 	}
     ,initPath: function() {
-        var src = document.getElementById('embedyou').getAttribute('src');
-        var path = src.split('/').slice(0,-1).join('/');
+        var path = '';
+        var embedyou = document.getElementById('embedyou')
+        if(embedyou) {
+            var src = embedyou.getAttribute('src');
+            var path = src.split('/').slice(0,-1).join('/');
+        }
         if(path.length == 0) {
             path = document.URL.split('/').slice(0,-1).join('/');
         }
