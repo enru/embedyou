@@ -1,11 +1,11 @@
 var EmbedYou = {
 	regex: [
-        /http(s)?:\/\/(www\.)?vimeo\.com\/([a-z0-9]+)/i
-        ,/http(s)?:\/\/(www\.)?youtube\.com\/watch\?.*v=([a-z0-9]+)/i
-        ,/http(s)?:\/\/(www\.)?youtu\.be\/([a-z0-9]+)/i
+        /http(s)?:\/\/(www\.)?vimeo\.com\/([_a-z0-9]+)/i
+        ,/http(s)?:\/\/(www\.)?youtube\.com\/watch\?.*v=([_a-z0-9]+)/i
+        ,/http(s)?:\/\/(www\.)?youtu\.be\/([_a-z0-9]+)/i
         /* ignore embed urls
-        ,/http(s)?:\/\/(www\.)?youtube\.com\/v/([a-z0-9]+)/i
-        ,/http(s)?:\/\/(www\.)?youtube\.com\/embed/([a-z0-9]+)/i
+        ,/http(s)?:\/\/(www\.)?youtube\.com\/v/([_a-z0-9]+)/i
+        ,/http(s)?:\/\/(www\.)?youtube\.com\/embed/([_a-z0-9]+)/i
         */
 	]
 	,initCSS: function(url) {
