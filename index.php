@@ -30,7 +30,7 @@
 			<strong>To use EmbedYou</strong>, place the following code into your HTML somewhere after all of your YouTube links &amp; just before the closing &lt;/body&gt; tag.
 			</p>
 <pre>
-&lt;script src="http://embedyou.herokuapp.com/embedyou.js" id="embedyou" &gt;&lt;/script&gt;
+&lt;script src="http://embedyou.enru.co.uk/embedyou.js" id="embedyou" &gt;&lt;/script&gt;
 </pre>
 			<p>
 			EmbedYou was inspired by <a href="http://embedtweet.com/">embedtweet</a> &amp; uses <a href="http://oembed.com/">oEmbed</a>.
