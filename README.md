@@ -1,12 +1,3 @@
-embedyou
-========
-
-creates youtube embeds from links to youtube vids
-
-[Permalink](http://embedyou.herokuapp.com/ "Permalink to embedyou by enru")
-
-# embedyou by enru
-
 # embedyou by [enru][1]
 
 EmbedYou is some standalone JavaScript (&amp; a PHP script hosted on heroku or on your own server) which will change any standard (anchor) link that is on your web page linking to a [YouTube][2] or [Vimeo][3] video into the appropriate embed code to display the YouTube player. 
