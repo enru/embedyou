@@ -31,5 +31,7 @@ if(isset($_REQUEST['url'])) {
 		}
 	}
 }
-header('Content-type: text/plain');
-echo $js;
+if(strlen($js) < 1) header("HTTP/1.0 404 Not Found"); 
+else { header('Content-type: text/plain'); echo $js; }
+exit;
+
