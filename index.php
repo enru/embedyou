@@ -26,6 +26,11 @@
 <pre>
 &lt;object width=&quot;459&quot; height=&quot;344&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/CrU8maUDQ70?version=3&amp;feature=oembed&quot;&gt;&lt;/param&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;/param&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot;&gt;&lt;/param&gt;&lt;embed src=&quot;http://www.youtube.com/v/CrU8maUDQ70?version=3&amp;feature=oembed&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;459&quot; height=&quot;344&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot;&gt;&lt;/embed&gt;&lt;/object&gt;
 </pre>
+
+<p>
+You can add <code>width</code> and <code>height</code> parameters to the video URL to set the <strong>width</strong> and <strong>height</strong> properties on the resulting embed code.
+</p>
+
 			<p>
 			<strong>To use EmbedYou</strong>, place the following code into your HTML somewhere after all of your YouTube links &amp; just before the closing &lt;/body&gt; tag.
 			</p>
