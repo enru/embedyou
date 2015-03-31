@@ -10,7 +10,10 @@ if(isset($_REQUEST['url'])) {
             case 'youtu.be':
             case 'youtube.com':
                 if(isset($qs['v'])) $id = 'embedyou_'.$qs['v'];
-                $req = 'http://www.youtube.com/oembed?url='.urlencode($_GET['url']);
+                $query = array('url' => $_GET['url']);
+                if(isset($qs['width'])) $query['maxwidth'] = filter_var($qs['width'], FILTER_VALIDATE_INT);
+                if(isset($qs['height'])) $query['maxheight'] = filter_var($qs['height'], FILTER_VALIDATE_INT);
+                $req = 'http://www.youtube.com/oembed?'.http_build_query($query);
                 break;
             case 'vimeo.com':
                 $query = array('url' => $_GET['url']);
