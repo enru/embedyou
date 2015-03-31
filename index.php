@@ -30,6 +30,11 @@
 <p>
 You can add <code>width</code> and <code>height</code> parameters to the video URL to set the <strong>width</strong> and <strong>height</strong> properties on the resulting embed code.
 </p>
+			<p>e.g.</p>
+<pre>
+&lt;a href="http://www.youtube.com/watch?v=CrU8maUDQ70&width=940&height=528"/&gt;&lt;/a&gt;
+</pre>
+
 
 			<p>
 			<strong>To use EmbedYou</strong>, place the following code into your HTML somewhere after all of your YouTube links &amp; just before the closing &lt;/body&gt; tag.
